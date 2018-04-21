@@ -9,7 +9,19 @@ import Dialog, {
 } from 'material-ui/Dialog';
 import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
+import styled from 'styled-components';
 import withRoot from '../src/withRoot';
+
+
+const StyledButton = styled(Button)`
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  height: 100px;
+  padding: 0 50px;
+  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .30);
+`;
 
 const styles = theme => ({
   root: {
@@ -61,6 +73,9 @@ class Index extends React.Component {
         <Button variant="raised" color="secondary" onClick={this.handleClick}>
           Super Secret Password
         </Button>
+        <StyledButton variant="raised" color="secondary" onClick={this.handleClick}>
+          Styled
+        </StyledButton>
       </div>
     );
   }
