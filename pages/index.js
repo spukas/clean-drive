@@ -1,9 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../src/theme';
+import { Button } from '../components';
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
-
-export default () => <Title>My page</Title>
+export default () => (
+    <ThemeProvider theme={theme}>
+        <React.Fragment>
+            <Button color="primary">Normal</Button>
+            <Button color="secondary">Themed</Button>
+        </React.Fragment>
+    </ThemeProvider>
+);
