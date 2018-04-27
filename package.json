@@ -1,8 +1,8 @@
 {
-  "name": "clean-drive",
+  "name": "next-js-project-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/spukas/clean-drive.git",
+  "repository": "https://github.com/spukas/next-js-project-boilerplate.git",
   "author": "l.spukas@gmail.com",
   "license": "MIT",
   "scripts": {
