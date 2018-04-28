@@ -2,8 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Button } from '../../components/atoms/Button';
-import { theme } from '../../components/themes/theme';
+import { Button } from './';
+import { theme } from '../../themes/theme';
 
 describe('Button', () => {
     it('Button renders', () => {
