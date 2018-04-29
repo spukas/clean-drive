@@ -6,7 +6,7 @@ import {
     colors,
 } from './constants';
 
-export const theme = {
+export default {
     breakpoints,
     space,
     fonts,
