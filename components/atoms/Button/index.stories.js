@@ -3,5 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '.';
 
 storiesOf('Button', module)
-  .add('default', () => <Button>Hello</Button>)
-  .add('themed', () => <Button color="secondary">Hello</Button>);
+  .add('default flat', () => <Button flat>Hello</Button>)
+  .add('raised', () => <Button raised>Hello</Button>)
+  .add('float', () => <Button float>+</Button>);
