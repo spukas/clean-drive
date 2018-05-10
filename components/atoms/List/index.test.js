@@ -1,34 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import theme from '../../themes';
-import { ListItem } from '../ListItem';
 import { List } from './';
 
-const items = [{ id: 1, name: 'Hello' }, { id: 2, name: 'World' }];
+const withProps = (props = {}) => shallow(<List {...props} />);
 
-describe('<List />', () => {
-  it('should render the component if no items are passed', () => {
-    const renderedComponent = shallow(
-      <List items={items} component={() => <ListItem theme={theme} />} />,
-    );
-    expect(renderedComponent.find(ListItem)).toBeDefined();
+describe('List', () => {
+  it('renders ul tag', () => {
+    const wrapper = withProps();
+    expect(wrapper.find('ul')).toHaveLength(1);
   });
 
-  it('should pass all items props to rendered component', () => {
-    const component = ({ item }) => <ListItem theme={theme}>{item.name}</ListItem>; // eslint-disable-line react/prop-types
-    const renderedComponent = shallow(<List items={items} component={component} />);
-    expect(renderedComponent.find(component)).toHaveLength(2);
-    expect(
-      renderedComponent
-        .find(component)
-        .at(0)
-        .prop('item'),
-    ).toBe(items[0]);
-    expect(
-      renderedComponent
-        .find(component)
-        .at(1)
-        .prop('item'),
-    ).toBe(items[1]);
+  it('renders children', () => {
+    const wrapper = withProps({ children: 'Item 1' })
+    expect(wrapper.contains('Item 1')).toBe(true);
   });
 });
