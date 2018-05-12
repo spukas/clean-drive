@@ -1,4 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 import logo from '../../../static/NextJs.svg';
 
-export const LogoImage = props => <img alt="Logo" {...props} src={logo} />;
+const Img = styled.img`
+    height: 80px;
+    width: 100px;
+    margin: 0 1rem;
+`;
+
+export const LogoImage = props => <Img alt="Logo" {...props} src={logo} />;

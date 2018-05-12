@@ -51,7 +51,6 @@ const styles = css`
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
-  margin-bottom: 10px;
   background-image: none;
   background-size: 0;
   background-repeat: no-repeat;
