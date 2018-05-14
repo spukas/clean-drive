@@ -8,12 +8,12 @@ export const defaultAnimation = css`
       active &&
       `
        transform: rotate(45deg);
-       top: -3px;
-       left: 8px;
+       top: 0;
+       left: 6px;
    `};
   }
   > :nth-child(2) {
-    top: 18px;
+    top: 12px;
     transform-origin: left center;
     ${({ active }) =>
       active &&
@@ -23,14 +23,14 @@ export const defaultAnimation = css`
    `};
   }
   > :nth-child(3) {
-    top: 36px;
+    top: 24px;
     transform-origin: left center;
     ${({ active }) =>
       active &&
       `
      transform: rotate(-45deg);
-     top: 39px;
-     left: 8px;
+     top: 28px;
+     left: 6px;
    `};
   }
 `;
@@ -42,11 +42,11 @@ export const secondaryAnimation = css`
       active &&
       `
       transform: rotate(135deg);
-      top: 18px;
+      top: 14px;
    `};
   }
   > :nth-child(2) {
-    top: 18px;
+    top: 12px;
     ${({ active }) =>
       active &&
       `
@@ -55,12 +55,12 @@ export const secondaryAnimation = css`
    `};
   }
   > :nth-child(3) {
-    top: 36px;
+    top: 24px;
     ${({ active }) =>
       active &&
       `
      transform: rotate(-135deg);
-     top: 18px;
+     top: 14px;
    `};
   }
 `;

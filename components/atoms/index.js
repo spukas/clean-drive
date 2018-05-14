@@ -8,3 +8,4 @@ export { Link } from './Link';
 export { List } from './List';
 export { ListItem } from './ListItem';
 export { LogoImage } from './LogoImage';
+export { Hamburger } from './Hamburger';

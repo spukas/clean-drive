@@ -19,10 +19,12 @@ export const Navigation = props => (
       <Link>Home</Link>
     </ListItem>
     <ListItem>
+      <Link>Services</Link>
+    </ListItem>
+    <ListItem>
       <Link>Contacts</Link>
     </ListItem>
-    <ListItem>Without link</ListItem>
-    <Button>Follow us</Button>
+    <Button raised>Follow us</Button>
   </Nav>
 );
 

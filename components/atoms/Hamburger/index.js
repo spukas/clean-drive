@@ -6,7 +6,7 @@ import { defaultAnimation, secondaryAnimation } from './animations';
 const StyledAtom = styled(Atom)`
   display: block;
   position: absolute;
-  height: 9px;
+  height: 3px;
   width: 100%;
   background: ${p => p.theme.palette.grayscale[0]};
   border-radius: 9px;
@@ -17,9 +17,8 @@ const StyledAtom = styled(Atom)`
 `;
 
 const StyledBlock = styled(Block)`
-  width: 60px;
-  height: 45px;
-  margin: 50px auto;
+  width: 40px;
+  height: 30px;
   position: relative;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
