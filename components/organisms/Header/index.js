@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { LogoImage, Hamburger } from '../../atoms';
 import { Navigation } from '../../molecules';
+
+const slideDown = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-30%); 
+  }   
+    
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -18,7 +30,6 @@ const HeaderWrapper = styled.div`
 const StyledNavigation = styled(Navigation)`
   display: flex;
   align-items: center;
-  transition: 0.5s ease-in-out;
 
   @media (max-width: 768px) {
     display: none;
@@ -26,7 +37,8 @@ const StyledNavigation = styled(Navigation)`
       p.vertical &&
       `
       display: block;
-      transition: 0.5s ease-in-out;
+      grid-column: 1 / 3;
+      animation: ${slideDown} 0.5s ease-out
     `};
   }
 `;
