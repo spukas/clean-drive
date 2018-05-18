@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Expand from '../../../static/expand.svg';
-import Icon from '.';
+import { Icon } from '.';
 
 storiesOf('Icon', module)
   .add('default', () => <Icon icon={<Expand />} />)
