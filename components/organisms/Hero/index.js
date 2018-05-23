@@ -1,8 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Block, H1, Paragraph, Button } from '../../atoms';
+import Expand from '../../../static/expand.svg';
+import { Block, H1, Paragraph, Button, Icon } from '../../atoms';
 
 const Wrapper = styled(Block)`
+  text-align: center;
+  padding: 2rem;
+`;
+
+const InnerWrapper = styled(Block)`
   display: grid;
   grid-auto-rows: 1fr;
   align-items: center;
@@ -20,12 +26,18 @@ const Text = styled(Paragraph)`
 `;
 
 export const Hero = props => (
-  <Wrapper {...props}>
-    <H1 {...props}>Lorem ipsum dolor sit amet</H1>
-    <Text {...props}>
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </Text>
-    <Button raised>Call to action</Button>
+  <Wrapper>
+    <InnerWrapper {...props}>
+      <H1 {...props}>Lorem ipsum dolor sit amet</H1>
+      <Text {...props}>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </Text>
+      <Button raised>Call to action</Button>
+    </InnerWrapper>
+
+    <Button float>
+      <Icon icon={<Expand />} light />
+    </Button>
   </Wrapper>
 );
