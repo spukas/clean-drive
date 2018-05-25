@@ -7,8 +7,11 @@ import { Icon, H3, Paragraph } from '../../atoms';
 const Wrapper = styled.div`
   position: relative;
   display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
   width: 200px;
-  height: 300px;
+  height: 200px;
   padding: 1rem;
   box-sizing: border-box;
   @media screen and (max-width: 640px) {
@@ -24,7 +27,6 @@ const StyledIcon = styled(Icon)`
 `
 
 const Text = styled.div`
-  margin-left: 1rem;
   overflow: auto;
   > :first-child {
     margin: 0;
